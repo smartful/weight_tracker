@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+
+import Title from './components/title/Title';
+import Input from './components/input/Input';
+import Chart from './components/chart/Chart';
+
+import './app.scss';
 
 function App() {
+  const [weightRecords, setWeightRecords] = useState([]);
+
+  const addNewRecord = (weight) => {
+    let index = weightRecords.length + 1;
+    let newRecord = {
+      index,
+      weight
+    };
+    setWeightRecords([...weightRecords, newRecord]);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Title />
+      <Input addNewRecord={addNewRecord}/>
+      <Chart data={weightRecords} />
     </div>
   );
 }
