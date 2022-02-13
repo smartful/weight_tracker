@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import Title from './components/title/Title';
-import Input from './components/input/Input';
-import Chart from './components/chart/Chart';
+import Title from "./components/title/Title";
+import Input from "./components/input/Input";
+import Chart from "./components/chart/Chart";
 
-import './app.scss';
+import "./app.css";
 
 function App() {
   const [weightRecords, setWeightRecords] = useState([]);
@@ -13,15 +13,15 @@ function App() {
     let index = weightRecords.length + 1;
     let newRecord = {
       index,
-      weight
+      weight,
     };
     setWeightRecords([...weightRecords, newRecord]);
-  }
+  };
 
   return (
     <div className="app">
       <Title />
-      <Input addNewRecord={addNewRecord}/>
+      <Input addNewRecord={addNewRecord} />
       <Chart data={weightRecords} />
     </div>
   );
