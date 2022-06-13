@@ -1,7 +1,6 @@
-import React from "react";
 import "./title.css";
 
-function Title() {
+const Title = () => {
   return (
     <div className="title">
       <h1>Weight Tracker</h1>
@@ -11,6 +10,6 @@ function Title() {
       </p>
     </div>
   );
-}
+};
 
 export default Title;
