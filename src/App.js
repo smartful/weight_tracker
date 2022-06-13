@@ -6,7 +6,7 @@ import Chart from "./components/chart/Chart";
 
 import "./app.css";
 
-function App() {
+const App = () => {
   const [weightRecords, setWeightRecords] = useState([]);
 
   const addNewRecord = (weight) => {
@@ -25,6 +25,6 @@ function App() {
       <Chart data={weightRecords} />
     </div>
   );
-}
+};
 
 export default App;

@@ -1,4 +1,3 @@
-import React from "react";
 import {
   LineChart,
   Line,
@@ -10,8 +9,8 @@ import {
 } from "recharts";
 import "./chart.css";
 
-function Chart(props) {
-  const data = props.data;
+const Chart = (props) => {
+  const { data } = props;
 
   return (
     <div className="chart">
@@ -41,6 +40,6 @@ function Chart(props) {
       </LineChart>
     </div>
   );
-}
+};
 
 export default Chart;
