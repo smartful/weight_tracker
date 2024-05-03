@@ -8,4 +8,4 @@ La bibliothèque utilisée pour la création du graphique est **recharts** :
 
 ## Lancer le script
 
-`npm start`
+`npm run dev`
