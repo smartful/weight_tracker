@@ -1,43 +1,23 @@
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-} from "recharts";
+import { LineChart } from "@mui/x-charts/LineChart";
 import "./chart.css";
 
-const Chart = (props) => {
-  const { data } = props;
+export const Chart = ({ data }) => {
+  console.log("data : ", data);
+  const labels = data.map((item, index) => index + 1);
+  console.log("labels : ", labels);
 
   return (
     <div className="chart">
       <LineChart
+        xAxis={[{ data: labels }]}
+        series={[
+          {
+            data: data,
+          },
+        ]}
         width={500}
         height={300}
-        data={data}
-        margin={{
-          top: 5,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-        style={{ backgroundColor: "#EEEEEE" }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="index" />
-        <YAxis type="number" domain={["auto", "auto"]} />
-        <Tooltip />
-        <Legend />
-        <Line
-          type="monotone"
-          dataKey="weight"
-          stroke="#8884d8"
-          activeDot={{ r: 4 }}
-        />
-      </LineChart>
+      />
     </div>
   );
 };

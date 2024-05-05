@@ -10,12 +10,7 @@ const App = () => {
   const [weightRecords, setWeightRecords] = useState([]);
 
   const addNewRecord = (weight) => {
-    let index = weightRecords.length + 1;
-    let newRecord = {
-      index,
-      weight,
-    };
-    setWeightRecords([...weightRecords, newRecord]);
+    setWeightRecords([...weightRecords, weight]);
   };
 
   return (
