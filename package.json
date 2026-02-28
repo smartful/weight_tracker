@@ -1,6 +1,6 @@
 {
   "name": "weight-tracker",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,19 +12,21 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "@mui/material": "^7.3.4",
-    "@mui/x-charts": "^8.14.1",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "@mui/material": "^7.3.8",
+    "@mui/x-charts": "^8.27.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
   },
   "devDependencies": {
-    "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.2",
-    "@vitejs/plugin-react-swc": "^4.1.0",
-    "eslint": "^9.7.0",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^7.0.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "eslint": "^9.39.1",
+    "@eslint/js": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
-    "vite": "^7.1.11"
+    "globals": "^16.5.0",
+    "vite": "^7.3.1"
   }
 }
